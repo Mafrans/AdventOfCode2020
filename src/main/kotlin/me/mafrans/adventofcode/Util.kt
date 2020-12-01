@@ -11,11 +11,7 @@ class Util {
         }
 
         fun readResourceLines(path: String): List<String> {
-            return String(
-                Util::class.java.classLoader
-                    .getResourceAsStream(path)!!
-                    .readBytes()
-            ).lines()
+            return readResource(path).lines()
         }
     }
 }
