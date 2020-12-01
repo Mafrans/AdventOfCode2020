@@ -29,5 +29,6 @@ fun main() {
         }
     }
 
+    // Measure time required to run the algorithm
     println("${Timer.next(Timer.TimeType.MILLIS)}ms")
 }
