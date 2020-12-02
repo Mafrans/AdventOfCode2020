@@ -14,7 +14,7 @@ fun main() {
         **/
         val data = line.split(" ")
 
-        // Range that the letter amount should be within
+        // Positions to look for in the body
         val positions = data[0].split("-")
 
         /*

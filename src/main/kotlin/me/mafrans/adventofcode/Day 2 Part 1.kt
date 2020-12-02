@@ -9,13 +9,12 @@ fun main() {
     var count = 0;
     for(line in input) {
         /*
-        *   Each line is formatted as
-        *   `<min>-<max> <letter>: <body>`.
+        *   Each line is formatted as `<min>-<max> <letter>: <body>`.
         *   Use split() to get the relevant data
         **/
         val data = line.split(" ")
 
-        // Range that the letter amount should be within
+        // Range that the letter amount should be within, where [0] is the minimum and [1] is the maximum
         val range = data[0].split("-")
 
         /*
