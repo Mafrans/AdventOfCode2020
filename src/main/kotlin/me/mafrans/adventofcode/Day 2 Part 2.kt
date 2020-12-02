@@ -14,24 +14,12 @@ fun main() {
         **/
         val data = line.split(" ")
 
-        /*
-        *   Array of positions to look for
-        *   data[0][0] grabs the character at index 0 of the string at index 0 of the data array
-        *   data[0][2] grabs the character at index 2 of the string at index 0 of the data array
-        *
-        *     0 1 2
-        *     ↓ ↓ ↓
-        *   " 2 - 8 "
-        **/
-        val positions = arrayOf(data[0][0], data[0][2]);
+        // Range that the letter amount should be within
+        val positions = data[0].split("-")
 
         /*
         *   Single char to look for in `body`
-        *   data[1][0] grabs the character at index 0 of the string at index 1 of the data array.
-        *
-        *     0 1
-        *     ↓ ↓
-        *   " a : "
+        *   data[1][0] grabs the character at index 0 of the string `data[1]`
         **/
         val letter = data[1][0];
 

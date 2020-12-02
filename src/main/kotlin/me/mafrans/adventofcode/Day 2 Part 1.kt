@@ -15,33 +15,19 @@ fun main() {
         **/
         val data = line.split(" ")
 
-        /*
-        *   Range that the letter amount should be within
-        *   data[0][0] grabs the character at index 0 of the string at index 0 of the data array (the minimum value)
-        *   data[0][2] grabs the character at index 2 of the string at index 0 of the data array (the maximum value)
-        *
-        *     0 1 2
-        *     ↓ ↓ ↓
-        *   " 2 - 8 "
-        **/
-        val range = arrayOf(data[0][0], data[0][2]);
+        // Range that the letter amount should be within
+        val range = data[0].split("-")
 
         /*
         *   Single char to look for in `body`
-        *   data[1][0] grabs the character at index 0 of the string at index 1 of the data array.
-        *
-        *     0 1
-        *     ↓ ↓
-        *   " a : "
+        *   data[1][0] grabs the character at index 0 of the string `data[1]`
         **/
         val letter = data[1][0];
 
         // Text to count occurrences in
         val body = data[2]
 
-        /*
-        *   Amount of occurrences of `letter` in `body`
-        **/
+        //Amount of occurrences of `letter` in `body`
         val amount = body.toCharArray().count { l -> l == letter };
 
         if (amount >= range[0].toInt() && amount <= range[1].toInt())
