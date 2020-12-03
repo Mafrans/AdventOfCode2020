@@ -15,7 +15,7 @@ fun main() {
     // Y-coordinate, from top to bottom
     var y = 0
 
-    // Loop and add 1 to `y` until it reaches the maximum value
+    // Loop until `y` reaches the maximum value
     while(y < input.size) {
         // If the character at position (x, y) is a tree, increase the count
         if(input[y][x] == '#')
@@ -23,6 +23,8 @@ fun main() {
 
         // Add 3 to the x coordinate, looping from the beginning if it reaches the max length
         x = (x + 3) % input[0].length;
+
+        // Add 1 to the y coordinate
         y += 1;
     }
 
