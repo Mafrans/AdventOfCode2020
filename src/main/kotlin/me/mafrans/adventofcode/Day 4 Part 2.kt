@@ -74,7 +74,7 @@ fun main() {
                 arrayOf(f.substring(0, 3), f.substring(4, f.length))
             }
 
-        // If all fields are presend and valid, increase the count
+        // If all fields are present and valid, increase the count
         if (fields.keys.all { f -> lineFields.map { a -> a[0] }.contains(f) } && lineFields.all { f -> fields[f[0]] != null && fields[f[0]]!!.invoke(f[1]) }) {
             count++
         }
