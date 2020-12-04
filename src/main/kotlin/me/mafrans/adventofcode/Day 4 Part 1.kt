@@ -39,7 +39,7 @@ fun main() {
             .split(" ", "\n")
             .filter { f -> f.isNotEmpty() }
             .map { f ->
-                "" + f[0] + f[1] + f[2]
+                f.substring(0..1)
             }
 
         // If all fields are valid, increase the count
