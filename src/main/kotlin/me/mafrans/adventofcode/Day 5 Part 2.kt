@@ -54,7 +54,7 @@ fun main() {
 
     // Loop over every possible row, ignoring the frontmost row and backmost row
     outer@for (row in 1..126) {
-        // Loop over every possible seat, ignoring the leftmost seat and the rightmost seat
+        // Loop over every possible seat
         for (seat in 1..7) {
             // Calculate the seat id
             val id = row * 8 + seat
