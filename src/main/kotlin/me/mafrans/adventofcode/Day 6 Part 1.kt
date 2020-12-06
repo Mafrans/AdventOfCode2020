@@ -18,12 +18,23 @@ fun main() {
     *   dioewurg
     *   ```
     * */
-    val lines = input.split("[\r\n]{3}".toRegex())
+    val groups = input.split("\r\n".repeat(2))
 
+    // The sum of all question answers
     var sum = 0
-    for (line in lines) {
-        val groups = line.replace("[\r\n]+".toRegex(), "").groupBy { e -> e }
-        sum += groups.keys.size
+
+    // Iterate over each group
+    for (group in groups) {
+        // Combine all answers and group them by the amount of times each answer appears
+        val set = HashSet<Char>();
+        val questionAmount = group.replace("\n", "").replace("\r", "").count { c ->
+            val doesContain = set.contains(c)
+            set.add(c)
+            !doesContain
+        }
+
+        // Increase the sum by the amount of answer
+        sum += questionAmount
     }
 
     println(sum)
