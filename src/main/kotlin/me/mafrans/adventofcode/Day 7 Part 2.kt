@@ -6,6 +6,9 @@ fun main() {
     * */
     class Bag(val name: String, val amount: Int)
 
+
+
+
     val input = Util.readResourceLines("day7.txt")
 
     // Start timer once the input has been read, so that it only measures the algorithm itself
