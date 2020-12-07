@@ -21,7 +21,7 @@ fun main() {
     for (line in input) {
         /*
         *   A bag string is formatted as: `<name> bag|bags contain <children: [<amount> <prefix> <color> bag|bags]>`.
-        *   Therefore, one can find data by splitting by " bags contain " and ", ", where:
+        *   Therefore, one can find data by splitting by " bags contain " and ", " where:
         *   [0]: The name of the bag
         *   [>0]: A list of children, formatted as `<amount> <prefix> <color> bag|bags`
         * */
