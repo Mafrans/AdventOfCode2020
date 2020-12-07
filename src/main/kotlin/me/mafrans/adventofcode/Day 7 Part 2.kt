@@ -29,7 +29,7 @@ fun main() {
 
         /*
         *   Set the key <bag name> in `bags` to an array containing all the child bags of that bag
-        *   The child bags are formatted as `<amount> <prefix> <color> bag|bags` and can therefore be parsed by
+        *   The child strings are formatted as `<amount> <prefix> <color> bag|bags` and can therefore be parsed by
         *   splitting the child string and using `Bag(name = "${childData[1]} ${childData[2]}", amount = childData[0])`
         * */
         bags[data[0]] = data.subList(1, data.size).map { childString ->
