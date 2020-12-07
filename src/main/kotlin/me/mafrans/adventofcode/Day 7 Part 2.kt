@@ -31,6 +31,8 @@ fun main() {
         *   Set the key <bag name> in `bags` to an array containing all the child bags of that bag
         *   The child strings are formatted as `<amount> <prefix> <color> bag|bags` and can therefore be parsed by
         *   splitting the child string and using `Bag(name = "${childData[1]} ${childData[2]}", amount = childData[0])`
+        *
+        *   If the child string is equal to "no other bags." there are no children in this bag and it can therefore safely be set to [null]
         * */
         bags[data[0]] = data.subList(1, data.size).map { childString ->
             val childData = childString.split(" ")
