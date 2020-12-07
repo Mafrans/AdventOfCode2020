@@ -14,7 +14,7 @@ fun main() {
     // All bags in the input
     val bags: HashMap<String, Array<Bag?>> = HashMap()
 
-    // Populate `all` with all bags
+    // Populate `bags` with all bags and their children
     for (line in input) {
         /*
         *   A bag string is formatted as: `<name> bag|bags contain <children: [<amount> <prefix> <color> bag|bags]>`.
