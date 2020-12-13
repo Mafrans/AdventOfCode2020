@@ -18,6 +18,8 @@ class Vector2D<out TX : Number, out TY: Number>(val x: TX, val y: TY) : Cloneabl
 
     operator fun set(x: Number, y: Number, other: Vector2D<Number, Number>) = Vector2D(x, y);
 
+    fun swap() = Vector2D(y, x);
+
     override fun equals(other: Any?): Boolean = other is Vector2D<Number, Number> && other.x == x && other.y == y
     override fun toString(): String = "($x, $y)"
 }

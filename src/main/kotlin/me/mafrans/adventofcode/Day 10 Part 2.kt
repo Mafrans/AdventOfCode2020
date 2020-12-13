@@ -5,6 +5,14 @@ import java.lang.Integer.min
 import java.util.concurrent.Executors
 import java.util.concurrent.TimeUnit
 
+/*
+*   ===================================
+*   WARNING!!!
+*   THIS IS UNFINISHED AND DOESN'T WORK
+*   ===================================
+* */
+
+
 fun main() {
 
     val input = Util.readResourceLines("day10.txt")
